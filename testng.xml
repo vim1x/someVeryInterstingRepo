@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Tests" verbose="5" parallel="methods" thread-count="2">
+
+    <listeners>
+        <listener class-name="Listeners.AllureListener" />
+    </listeners>
+
+    <test name="Sorting">
+        <classes>
+            <class name="tests.SortPriceTest" />
+            <class name="tests.StarSearchTest" />
+        </classes>
+    </test>
+    <test name="Data Related">
+        <classes>
+            <class name="tests.CheckDataTransferTest"/>
+        </classes>
+    </test>
+    <test name="Searching">
+        <classes>
+            <class name="tests.DepartureDestinationSearchBothWaysTest"/>
+        </classes>
+    </test>
+</suite>
